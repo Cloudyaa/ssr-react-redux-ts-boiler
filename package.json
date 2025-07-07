@@ -8,7 +8,8 @@
     "dev": "tsx server.ts",
     "build": "bunx --bun vite build",
     "lint": "eslint --fix --max-warnings=0 .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "bunx prettier --write src/**/*.{ts,tsx,js,jsx,json,css,scss,md}"
   },
   "dependencies": {
     "express": "^5.1.0",
@@ -22,9 +23,11 @@
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react-swc": "^3.10.2",
     "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
+    "prettier": "3.6.2",
     "tsx": "^4.20.3",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
