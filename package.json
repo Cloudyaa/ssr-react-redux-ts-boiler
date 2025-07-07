@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "bunx --bun vite build",
+    "build": "vite build",
     "lint": "eslint --fix --max-warnings=0 .",
     "preview": "vite preview",
-    "format": "bunx prettier --write src/**/*.{ts,tsx,js,jsx,json,css,scss,md}"
+    "format": "prettier --write src/**/*.{ts,tsx,css}"
   },
   "dependencies": {
     "express": "^5.1.0",
