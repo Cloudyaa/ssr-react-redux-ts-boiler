@@ -1,10 +1,14 @@
 import { hydrateRoot } from 'react-dom/client'
-import App from './App'
 import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
+import { createRouter } from './router'
+import { RouterProvider } from 'react-router-dom'
 
 /** Get preloaded state from server */
 const preloadedState = window.__PRELOADED_STATE__
+
+/** Create router */
+const router = createRouter()
 
 /** Create store with preloaded state */
 const store = configureStore({
@@ -19,6 +23,6 @@ delete window.__PRELOADED_STATE__
 hydrateRoot(
   document.getElementById('root')!,
   <Provider store={store}>
-    <App />
+    <RouterProvider router={router} />
   </Provider>
 )
