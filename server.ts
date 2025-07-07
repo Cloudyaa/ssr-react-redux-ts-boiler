@@ -38,16 +38,21 @@ async function createServer() {
       //    required, and provides efficient invalidation similar to HMR.
       const { render } = await vite.ssrLoadModule('/src/entry-server.tsx')
 
-      // 4. render the app HTML. This assumes entry-server.js's exported
+      // 4. render the app HTML. This assumes entry-server.tsx's exported
       //     `render` function calls appropriate framework SSR APIs,
       //    e.g. ReactDOMServer.renderToString()
-      const appHtml = await render(url)
+      const { html, preloadedState } = await render(url)
 
-      // 5. Inject the app-rendered HTML into the template.
-      const html = template.replace(`<!--ssr-outlet-->`, () => appHtml)
+      // 5. Inject both HTML and Redux state
+      const finalHtml = template
+        .replace(`<!--ssr-outlet-->`, html)
+        .replace(
+          `<!--redux-state-->`,
+          `<script>window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}</script>`
+        )
 
       // 6. Send the rendered HTML back.
-      res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
+      res.status(200).set({ 'Content-Type': 'text/html' }).end(finalHtml)
     } catch (e) {
       // If an error is caught, let Vite fix the stack trace so it maps back
       // to your actual source code.
