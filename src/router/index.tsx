@@ -1,7 +1,7 @@
 import { createBrowserRouter, createMemoryRouter } from 'react-router-dom';
-import { RootLayout } from '../components/layout/root.tsx';
-import { NotFoundPage } from '../pages/not-found.tsx';
-import { HomePage } from '../pages/home.tsx';
+import { RootLayout } from '@/components/layout/root';
+import { NotFoundPage } from '@/pages/not-found';
+import { HomePage } from '@/pages/home';
 
 export const routes = [
   {

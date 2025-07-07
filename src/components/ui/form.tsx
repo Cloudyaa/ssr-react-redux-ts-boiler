@@ -11,7 +11,7 @@ import {
 
 import { cn } from '@/lib/utils';
 import { Label } from '@/components/ui/label';
-import { useFormField } from '@/hooks/use-form-field.ts';
+import { useFormField } from '@/hooks/use-form-field';
 
 const Form = FormProvider;
 
