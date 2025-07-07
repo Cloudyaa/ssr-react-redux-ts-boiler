@@ -81,6 +81,8 @@ is-cloudy-weather-app/
 ## Stack technologiczny
 
 - **Frontend**: React 19, TypeScript
+- **Zarządzanie stanem**: Redux 9
+- **Routing**: React Router 7
 - **Narzędzie budowania**: Vite 7
 - **Serwer**: Express 5, SSR (renderowanie po stronie serwera)
 - **Środowisko uruchomieniowe**: Node.js z tsx do wykonywania TypeScript
