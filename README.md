@@ -1,4 +1,4 @@
-# SSR React app boilerplate with TS, Redux and React router ready
+# SSR React app boilerplate with TS, Redux and React router ready, styled with Tailwind 4 and shadcn/ui
 
 A Server-Side Rendered (SSR) React application built with Vite, Express, and TypeScript.
 
@@ -80,7 +80,7 @@ ssr-react-redux-ts-boiler/
 
 ## Technology Stack
 
-- **Frontend**: React 19, TypeScript
+- **Frontend**: React 19, TypeScript, Tailwind 4, shadcn/ui
 - **State Management**: Redux 9
 - **Routing**: React Router 7
 - **Build Tool**: Vite 7

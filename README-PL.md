@@ -1,6 +1,6 @@
 # Boilerplate aplikacji SSR React, TS, Redux oraz React router
 
-Aplikacja React z renderowaniem po stronie serwera (SSR) zbudowana z Vite, Express i TypeScript.
+Aplikacja React z renderowaniem po stronie serwera (SSR) zbudowana z Vite, Express i TypeScript + Tailwind / shadcn.
 
 ## Wstępne Wymagania
 
@@ -80,7 +80,7 @@ ssr-react-redux-ts-boiler/
 
 ## Stack technologiczny
 
-- **Frontend**: React 19, TypeScript
+- **Frontend**: React 19, TypeScript, Tailwind 4, shadcn/ui
 - **Zarządzanie stanem**: Redux 9
 - **Routing**: React Router 7
 - **Narzędzie budowania**: Vite 7
