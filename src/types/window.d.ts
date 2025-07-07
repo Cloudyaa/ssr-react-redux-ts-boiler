@@ -1,9 +1,9 @@
-import type { RootState } from '../store'
+import type { RootState } from '@/store';
 
 declare global {
   interface Window {
-    __PRELOADED_STATE__?: RootState
+    __PRELOADED_STATE__?: RootState;
   }
 }
 
-export {}
+export {};

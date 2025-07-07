@@ -5,34 +5,41 @@ Aplikacja React z renderowaniem po stronie serwera (SSR) zbudowana z Vite, Expre
 ## Wstępne Wymagania
 
 ### Wersja Node.js
+
 Aplikacja wymaga **Node.js w wersji 18.20.0 lub wyższej** (lub Node.js 20.10.0+).
 
 Sprawdź swoją wersję Node.js:
+
 ```bash
 node --version
 ```
 
 Jeśli potrzebujesz aktualizacji Node.js:
+
 - Pobierz najnowszą wersję LTS z [nodejs.org](https://nodejs.org/)
 - Lub użyj menedżera wersji takiego jak [nvm](https://github.com/nvm-sh/nvm)
 
 ### Menedżer pakietów
+
 Potrzebujesz npm (dostarczany z Node.js) lub dowolny kompatybilny menedżer pakietów.
 
 ## Instalacja
 
 1. **Sklonuj repozytorium** (lub pobierz pliki projektu)
+
    ```bash
    git clone https://github.com/Cloudyaa/ssr-react-redux-ts-boiler.git
    cd ssr-react-redux-ts-boiler
    ```
 
 2. **Zainstaluj zależności**
+
    ```bash
    npm install
    ```
 
    Jeśli napotkasz jakiekolwiek problemy, spróbuj:
+
    ```bash
    npm install --legacy-peer-deps
    ```
@@ -40,6 +47,7 @@ Potrzebujesz npm (dostarczany z Node.js) lub dowolny kompatybilny menedżer paki
 ## Rozwój
 
 ### Uruchom serwer deweloperski
+
 ```bash
 npm run dev
 ```
@@ -47,6 +55,7 @@ npm run dev
 Aplikacja będzie dostępna pod adresem [http://localhost:3000](http://localhost:3000)
 
 ### Inne dostępne komendy
+
 ```bash
 # Zbuduj aplikację po stronie klienta
 npm run build:client
@@ -117,6 +126,7 @@ ssr-react-redux-ts-boiler/
 Jeśli musisz zarządzać wieloma wersjami Node.js:
 
 **Używając nvm (macOS/Linux):**
+
 ```bash
 # Zainstaluj i użyj Node.js 20.18.0
 nvm install 20.18.0
@@ -124,6 +134,7 @@ nvm use 20.18.0
 ```
 
 **Używając nvm-windows (Windows):**
+
 ```bash
 # Najpierw zainstaluj nvm-windows, następnie:
 nvm install 20.18.0

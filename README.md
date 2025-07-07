@@ -5,34 +5,41 @@ A Server-Side Rendered (SSR) React application built with Vite, Express, and Typ
 ## Prerequisites
 
 ### Node.js Version
+
 This application requires **Node.js 18.20.0 or higher** (or Node.js 20.10.0+).
 
 Check your Node.js version:
+
 ```bash
 node --version
 ```
 
 If you need to update Node.js:
+
 - Download the latest LTS version from [nodejs.org](https://nodejs.org/)
 - Or use a version manager like [nvm](https://github.com/nvm-sh/nvm)
 
 ### Package Manager
+
 You'll need npm (comes with Node.js) or any compatible package manager.
 
 ## Installation
 
 1. **Clone the repository** (or download the project files)
+
    ```bash
    git clone https://github.com/Cloudyaa/ssr-react-redux-ts-boiler.git
    cd ssr-react-redux-ts-boiler
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
    If you encounter any issues, try:
+
    ```bash
    npm install --legacy-peer-deps
    ```
@@ -40,6 +47,7 @@ You'll need npm (comes with Node.js) or any compatible package manager.
 ## Development
 
 ### Start the development server
+
 ```bash
 npm run dev
 ```
@@ -47,6 +55,7 @@ npm run dev
 The application will be available at [http://localhost:3000](http://localhost:3000)
 
 ### Other available commands
+
 ```bash
 # Build the client-side application
 npm run build:client
@@ -92,19 +101,19 @@ ssr-react-redux-ts-boiler/
 ### Common Issues
 
 1. **"crypto.hash is not a function" error**
-    - Your Node.js version is too old
-    - Update to Node.js 18.20+ or 20.10+
+   - Your Node.js version is too old
+   - Update to Node.js 18.20+ or 20.10+
 
 2. **"Cannot find module" errors**
-    - Make sure all dependencies are installed: `npm install`
-    - Delete `node_modules` and `package-lock.json`, then reinstall
+   - Make sure all dependencies are installed: `npm install`
+   - Delete `node_modules` and `package-lock.json`, then reinstall
 
 3. **Port 3000 already in use**
-    - Kill the process using port 3000, or modify the port in `server.ts`
+   - Kill the process using port 3000, or modify the port in `server.ts`
 
 4. **TypeScript compilation errors**
-    - Ensure you're using the correct Node.js version
-    - Try: `npm install tsx@latest`
+   - Ensure you're using the correct Node.js version
+   - Try: `npm install tsx@latest`
 
 ### System Requirements
 
@@ -117,6 +126,7 @@ ssr-react-redux-ts-boiler/
 If you need to manage multiple Node.js versions:
 
 **Using nvm (macOS/Linux):**
+
 ```bash
 # Install and use Node.js 20.18.0
 nvm install 20.18.0
@@ -124,6 +134,7 @@ nvm use 20.18.0
 ```
 
 **Using nvm-windows (Windows):**
+
 ```bash
 # Install nvm-windows first, then:
 nvm install 20.18.0
