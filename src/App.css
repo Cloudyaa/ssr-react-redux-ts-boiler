@@ -74,6 +74,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --navbar-height: 40px;
+  --screen-height: calc(100dvh - var(--navbar-height));
 }
 
 .dark {
@@ -149,6 +152,10 @@
 
   h6 {
     @apply text-lg;
+  }
+
+  nav {
+    @apply h-(--navbar-height);
   }
 
   .flex-center {
