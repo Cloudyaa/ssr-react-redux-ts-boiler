@@ -1,9 +1,15 @@
 import { readFile } from 'node:fs/promises';
 import express from 'express';
 import { createServer as createViteServer } from 'vite';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-async function createServer() {
-  const app = express();
+let app: express.Application;
+
+export async function createServer() {
+  // avoid recreating the Vite server on every request
+  if (app) return app;
+
+  app = express();
 
   // Create Vite server in middleware mode and configure the app type as
   // 'custom', disabling Vite's own HTML serving logic so parent server
@@ -56,12 +62,21 @@ async function createServer() {
     } catch (e) {
       // If an error is caught, let Vite fix the stack trace so it maps back
       // to your actual source code.
-      vite.ssrFixStacktrace(e);
+      vite.ssrFixStacktrace(e as Error);
       next(e);
     }
   });
 
-  app.listen(3000);
+  return app;
 }
 
-createServer();
+// Export for Vercel
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+  try {
+    const app = await createServer();
+    return app(req, res);
+  } catch (error) {
+    console.error('Handler error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
