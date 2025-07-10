@@ -61,5 +61,8 @@
     "bun": ">=1.0.0"
   },
   "packageManager": "bun@1.2.7",
-  "engineStrict": true
+  "engineStrict": true,
+  "bun": {
+    "onlyBuiltDependencies": ["lightningcss"]
+  }
 }
