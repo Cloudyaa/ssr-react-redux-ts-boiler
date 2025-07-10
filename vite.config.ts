@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: { port: 3000 },
   build: {
-    ssr: 'src/entry-server.tsx', // punkt wejścia dla serwera
+    ssr: 'src/entry-server.tsx',
     outDir: 'dist/server',
     rollupOptions: {
       input: 'src/entry-server.tsx',

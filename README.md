@@ -1,6 +1,6 @@
-# SSR React app boilerplate with TS, Redux and React router ready, styled with Tailwind 4 and shadcn/ui
+# ⚡ SSR React app boilerplate - Typescript, Redux, React Router 7, Tailwind 4, shadcn/ui, Vite, Express (with **Bun**)
 
-A Server-Side Rendered (SSR) React application built with Vite, Express, and TypeScript.
+A Server-Side Rendered (SSR) React application built with **Vite**, **Express**, and **TypeScript**, using **Redux** for state management, **React Router**, **Tailwind CSS v4**, and **shadcn/ui** — powered by **Bun** for faster installs and runtime.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This application requires **Node.js 18.20.0 or higher** (or Node.js 20.10.0+).
 Check your Node.js version:
 
 ```bash
-node --version
+  node --version
 ```
 
 If you need to update Node.js:
@@ -21,7 +21,17 @@ If you need to update Node.js:
 
 ### Package Manager
 
-You'll need npm (comes with Node.js) or any compatible package manager.
+This project uses **Bun** instead of npm. Bun is a great drop-in replacement that drastically speeds up install and run times. You can always change your project pm back to npm if you want to.
+
+#### Install Bun
+```bash
+   curl -fsSL https://bun.sh/install | bash
+```
+
+#### Restart terminal, and check bun version
+```bash
+   bun --version
+```
 
 ## Installation
 
@@ -35,13 +45,13 @@ You'll need npm (comes with Node.js) or any compatible package manager.
 2. **Install dependencies**
 
    ```bash
-   npm install
+   bun install
    ```
 
    If you encounter any issues, try:
 
    ```bash
-   npm install --legacy-peer-deps
+   bun install --legacy-peer-deps
    ```
 
 ## Development
@@ -49,7 +59,7 @@ You'll need npm (comes with Node.js) or any compatible package manager.
 ### Start the development server
 
 ```bash
-npm run dev
+  bun run dev
 ```
 
 The application will be available at [http://localhost:3000](http://localhost:3000)
@@ -57,11 +67,11 @@ The application will be available at [http://localhost:3000](http://localhost:30
 ### Other available commands
 
 ```bash
-# Build the client-side application
-npm run build:client
+# Add shadcn/ui base components
+bun run ui:add
 
-# Build the server-side application
-npm run build:server
+# Build the application
+npm run build
 
 # Run linting
 npm run lint
@@ -78,6 +88,7 @@ npm run format
 ```
 ssr-react-redux-ts-boiler/
 ├── src/
+    ├── entry-client.tsx    # Client-side entry point
 │   ├── entry-server.tsx    # Server-side entry point
 │   └── ...                 # Other source files
 ├── server.ts               # Express server with SSR
@@ -118,7 +129,7 @@ ssr-react-redux-ts-boiler/
 ### System Requirements
 
 - **Node.js**: 18.20.0+ or 20.10.0+
-- **npm**: 8.0.0+
+- **bun**: 1.0.0+ or **npm**: 8.0.0+
 - **Operating System**: Windows, macOS, or Linux
 
 ### Node.js Version Management
