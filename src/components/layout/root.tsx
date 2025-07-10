@@ -3,10 +3,10 @@ import { Link, Outlet } from 'react-router-dom';
 export const RootLayout = () => {
   return (
     <div>
-      <nav>
-        <Link to="/">Home</Link>
+      <nav className="bg-accent flex-center px-2">
+        <Link to="/">This is your navbar</Link>
       </nav>
-      <main>
+      <main className="h-(--screen-height)">
         <Outlet />
       </main>
     </div>
